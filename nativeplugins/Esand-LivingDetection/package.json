@@ -1,0 +1,54 @@
+{
+    "name": "Esand-LivingDetection",
+    "id": "Esand-LivingDetection",
+    "version": "1.1.0",
+    "description": "活体检测",
+    "_dp_type": "nativeplugin",
+    "_dp_nativeplugin": {
+        "android": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "Esand-LivingDetection",
+                    "class": "com.esandinfo.livingdetection.uniappmodule.EsLivingDetectionModule"
+                }
+            ],
+            "dependencies": [
+                "com.zhy:okhttputils:2.6.2",
+                "com.google.code.gson:gson:2.8.6",
+                "com.alibaba:fastjson:1.2.70@jar"
+            ],
+            "abis": [
+                "armeabi-v7a",
+                "arm64-v8a"
+            ],
+            "integrateType": "aar",
+            "minSdkVersion": 21,
+            "permissions": [
+                "android.permission.ACCESS_NETWORK_STATE",
+                "android.permission.INTERNET",
+                "android.permission.READ_PHONE_STATE",
+                "android.permission.CAMERA"
+            ]
+        },
+        "ios": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "Esand-LivingDetection",
+                    "class": "EsLivingDetectionModule"
+                }
+            ],
+            "integrateType": "framework",
+            "frameworks": [
+                "UIKit.framework",
+                "AVFoundation.framework",
+                "Accelerate.framework",
+                "EsLivingDetection.framework"
+            ],
+            "privacies": [
+                "NSCameraUsageDescription"
+            ]
+        }
+    }
+}

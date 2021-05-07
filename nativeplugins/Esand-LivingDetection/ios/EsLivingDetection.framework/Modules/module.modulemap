@@ -1,0 +1,6 @@
+framework module EsLivingDetection {
+  umbrella header "EsLivingDetection.h"
+
+  export *
+  module * { export * }
+}
