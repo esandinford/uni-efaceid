@@ -4,15 +4,6 @@
       <image class='esand_logo' src="../../static/esand_logo.png"></image>
     </view>
     
-    <view class="uni-list">
-      <radio-group @change="radioChange">
-        <label class="uni-list-cell uni-list-cell-pd radio-group" v-for="(item, index) in items" :key="item.value">
-          <radio :value="item.value" :checked="index === livingType-1" style="transform:scale(0.5)"/>
-          <view style="display: inline-block;">{{item.name}}</view>
-        </label>
-      </radio-group>
-    </view>
-    
     <view class="btn-row">
       <button type="primary" class="primary item" @tap="startVerify()">发起活体检测</button>
     </view>
@@ -26,45 +17,40 @@
 <script>
   const livingDetection = uni.requireNativePlugin("Esand-LivingDetection");
   // TODO 替换成您自己的APPCODE(切勿泄漏), 如何获取APPCODE,可参考：https://esandinfo.yuque.com/docs/share/13ad611e-b9c3-4cf8-a9a8-fe23a419312e?#
-  const APPCODE = '替换成您自己的APPCODE';
+  const APPCODE = '替换为你的appcode';
   export default {
     data() {
       return {
-        msg: 'logs',
-        items: [{
-            value: '1',
-            name: '远近'
-          },{
-            value: '2',
-            name: '眨眼'
-          },{
-            value: '3',
-            name: '摇头'
-          },{
-            value: '4',
-            name: '点头'
-          },{
-            value: '5',
-            name: '张嘴'
-          }
-        ],
-        livingType: 2 
+        msg: 'logs'
       }
     },
     methods: {
       startVerify: function(e) {
         /**
-         * 1. 认证初始化
-         * @param options(JSONObject), 包括如下字段：
-         *     livingType：认证类型  1：远近，2：眨眼，3：摇头，4: 点头，5:张嘴
-         * @return livingDetectResult 对象包括如下几个字段
-         * {
-         *    "code": ”ELD_SUCCESS“, -- ELD_SUCCESS：成功，ELD_FAILED：失败，ELD_PARAME_ERROR：参数异常，ELD_EXCEPTION：发生异常，ELD_UNSUPPORT：不支持此活体类型
-         *    "msg":”成功“, -- 执行结果描述
-         *    "data": "......" -- 执行结果数据
-         * }
-         */
-        let livingDetectResult = livingDetection.verifyInit({"livingType":this.livingType});
+        * @param options(JSONObject), 包括如下字段：
+        *     livingType：认证类型  1：远近，2：眨眼，3：摇头，4: 点头，5:张嘴，7:高性能远近，8：高性能摇头，9：高性能点头，可以是活体组合，如：123--先远近，后眨眼，后摇头，活体组合最多四个
+        *     textColor：界面样式-字体颜色
+        *     progressColor：界面样式-进度条颜色
+        *     progressBgColor：界面样式-进度条背景颜色
+        *     progressStaGradient：界面样式-进度条渐变开始颜色
+        *     progressEndGradient：界面样式-进度条渐变结束颜色
+        *     backGroundColor：界面样式-页面背景颜色
+        *     circleBackWidth：界面样式-进度条宽度
+        * @return livingDetectResult 对象包括如下几个字段
+        * {
+        *		"code": ”ELD_SUCCESS“, -- ELD_SUCCESS：成功，ELD_FAILED：失败，ELD_PARAME_ERROR：参数异常，ELD_EXCEPTION：发生异常，ELD_UNSUPPORT：不支持此活体类型
+        * 		"msg":”成功“, -- 执行结果描述
+        * 		"data": "......" -- 执行结果数据
+        * }
+        */
+        let livingDetectResult = livingDetection.verifyInit({"livingType":"134",
+		"progressStaGradient":"#1781b5",
+		"progressEndGradient":"#66a9c9",
+		"progressBgColor":"#DDDDDD",
+		"backGroundColor":"#FFFFFF",
+		"textColor":"#222222",
+		"progressColor":"#0000FF",
+		"circleBackWidth":5});
         if (livingDetectResult.code != 'ELD_SUCCESS') {
           this.msg = '活体检测初始化失败：' + livingDetectResult.msg
           return;

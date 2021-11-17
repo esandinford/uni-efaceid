@@ -9,7 +9,14 @@ Android/IOS活体检测 (眨眼，摇头，点头，张嘴，远近)，前后端
 /**
  * 认证初始化
  * @param options(JSONObject), 包括如下字段：
- *     livingType：认证类型  1：远近，2：眨眼，3：摇头，4: 点头，5:张嘴
+ *     livingType：认证类型  1：远近，2：眨眼，3：摇头，4: 点头，5:张嘴，7:高性能远近，8：高性能摇头，9：高性能点头，可以是活体组合，如：123--先远近，后眨眼，后摇头，活体组合最多四个
+ *     textColor：界面样式-字体颜色
+ *     progressColor：界面样式-进度条颜色
+ *     progressBgColor：界面样式-进度条背景颜色
+ *     progressStaGradient：界面样式-进度条渐变开始颜色
+ *     progressEndGradient：界面样式-进度条渐变结束颜色
+ *     backGroundColor：界面样式-页面背景颜色
+ *     circleBackWidth：界面样式-进度条宽度
  * @return livingDetectResult 对象包括如下几个字段
  * {
  *		"code": ”ELD_SUCCESS“, -- ELD_SUCCESS：成功，ELD_FAILED：失败，ELD_PARAME_ERROR：参数异常，ELD_EXCEPTION：发生异常，ELD_UNSUPPORT：不支持此活体类型
