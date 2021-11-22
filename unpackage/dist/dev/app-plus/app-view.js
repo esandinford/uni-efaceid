@@ -86,9 +86,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!*************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/main.js ***!
-  \*************************************************************************/
+/*!****************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/main.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -115,9 +115,9 @@ if (typeof plus !== 'undefined') {
 
 /***/ }),
 /* 1 */
-/*!********************************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages.json?{"type":"view"} ***!
-  \********************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/pages.json?{"type":"view"} ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -141,9 +141,9 @@ __definePage('pages/index/index', function () {return Vue.extend(__webpack_requi
 
 /***/ }),
 /* 2 */
-/*!***************************************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?mpType=page ***!
-  \***************************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?mpType=page ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -181,9 +181,9 @@ component.options.__file = "pages/index/index.vue"
 
 /***/ }),
 /* 3 */
-/*!*********************************************************************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=template&id=2be84a3c&mpType=page ***!
-  \*********************************************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=template&id=2be84a3c&mpType=page ***!
+  \************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -202,9 +202,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 4 */
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=template&id=2be84a3c&mpType=page ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=template&id=2be84a3c&mpType=page ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -236,13 +236,68 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
+        { attrs: { _i: 3 } },
+        [
+          _c(
+            "v-uni-checkbox-group",
+            {
+              staticClass: _vm._$g(4, "sc"),
+              attrs: { _i: 4 },
+              on: {
+                change: function($event) {
+                  return _vm.$handleViewEvent($event)
+                }
+              }
+            },
+            [
+              _vm._l(_vm._$g(5, "f"), function(livingType, $10, $20, $30) {
+                return [
+                  _c(
+                    "v-uni-checkbox",
+                    {
+                      key: livingType["k0"],
+                      staticClass: _vm._$g("6-" + $30, "sc"),
+                      attrs: {
+                        value: _vm._$g("6-" + $30, "a-value"),
+                        checked: _vm._$g("6-" + $30, "a-checked"),
+                        _i: "6-" + $30
+                      }
+                    },
+                    [_vm._v(_vm._$g("6-" + $30, "t0-0"))]
+                  )
+                ]
+              })
+            ],
+            2
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        { attrs: { _i: 7 } },
+        [
+          _c(
+            "p",
+            { staticClass: _vm._$g(8, "sc"), attrs: { _i: 8 } },
+            [
+              _c("span", { attrs: { _i: 9 } }, [_vm._v("当前选择的活体类型:")]),
+              _c("span", { attrs: { _i: 10 } }, [_vm._v(_vm._$g(10, "t0-0"))])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-uni-view",
+        { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } },
         [
           _c(
             "v-uni-button",
             {
-              staticClass: _vm._$g(4, "sc"),
-              attrs: { type: "primary", _i: 4 },
+              staticClass: _vm._$g(12, "sc"),
+              attrs: { type: "primary", _i: 12 },
               on: {
                 click: function($event) {
                   return _vm.$handleViewEvent($event)
@@ -256,10 +311,10 @@ var render = function() {
       ),
       _c(
         "div",
-        { attrs: { align: "center", _i: 5 } },
+        { attrs: { align: "center", _i: 13 } },
         [
           _c("v-uni-textarea", {
-            attrs: { value: _vm._$g(6, "a-value"), _i: 6 }
+            attrs: { value: _vm._$g(14, "a-value"), _i: 14 }
           })
         ],
         1
@@ -276,9 +331,9 @@ render._withStripped = true
 
 /***/ }),
 /* 5 */
-/*!***************************************************************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=script&lang=js&mpType=page ***!
-  \***************************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=script&lang=js&mpType=page ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -291,9 +346,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 6 */
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=script&lang=js&mpType=page ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/using-components.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=script&lang=js&mpType=page ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -311,9 +366,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 7 */
-/*!***********************************************************************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=style&index=0&lang=css&mpType=page ***!
-  \***********************************************************************************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=style&index=0&lang=css&mpType=page ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -326,9 +381,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 8 */
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=style&index=0&lang=css&mpType=page ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=style&index=0&lang=css&mpType=page ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -340,15 +395,15 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! ../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader/lib/addStylesClient.js */ 11).default
-var update = add("61a53b0f", content, false, {"sourceMap":false,"shadowMode":false});
+var update = add("43159584", content, false, {"sourceMap":false,"shadowMode":false});
 // Hot Module Replacement
 if(false) {}
 
 /***/ }),
 /* 9 */
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/pages/index/index.vue?vue&type=style&index=0&lang=css&mpType=page ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/工作/eLivingDetection/pages/index/index.vue?vue&type=style&index=0&lang=css&mpType=page ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -356,7 +411,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.content {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.esand_logo {\n  margin-top: 100rpx;\n  margin-bottom: 100rpx;\n  width: 200rpx;\n  height: 200rpx;\n  -webkit-align-self: center;\n          align-self: center;\n}\nuni-label {\n  display: block;\n  margin-top: 10rpx;\n}\n.radio-group{\n  display: inline-block;\n}\nuni-textarea {\n  margin-top: 20rpx;\n  height: 800rpx;\n  font-size: small;\n}\n", ""]);
+exports.push([module.i, "\n.content {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n}\n.esand_logo {\n    margin-top: 100rpx;\n    margin-bottom: 100rpx;\n    width: 200rpx;\n    height: 200rpx;\n    -webkit-align-self: center;\n            align-self: center;\n}\nuni-label {\n    display: block;\n    margin-top: 10rpx;\n}\n.radio-group{\n    display: inline-block;\n}\nuni-textarea {\n    margin-top: 20rpx;\n    height: 800rpx;\n    font-size: small;\n}\n.es_checkboxContainer{\n\t  width: 100vw;\n\t  display:inline-block;\n\t  position: relative;\n\t  text-align: center;\n\t  display: -webkit-box;\n\t  display: -webkit-flex;\n\t  display: flex;\n\t  -webkit-box-align: center;\n\t  -webkit-align-items: center;\n\t          align-items: center;\n\t  -webkit-box-orient:horizontal;\n\t  -webkit-box-direction:normal;\n\t  -webkit-flex-direction:row;\n\t          flex-direction:row;\n\t  -webkit-justify-content: space-around;\n\t          justify-content: space-around;\n\t  margin: 10px 0px;\n}\n.es_checkbox{\n\t  display: inline-block;\n}\n.es_tip{\n\t  margin: 10px 0px;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -903,9 +958,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 14 */
-/*!**********************************************************************************************************!*\
-  !*** /Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/App.vue?vue&type=style&index=0&lang=css& ***!
-  \**********************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** /Users/zhangzelong/Documents/工作/eLivingDetection/App.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -918,9 +973,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 15 */
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/App.vue?vue&type=style&index=0&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/工作/eLivingDetection/App.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -932,15 +987,15 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! ../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/app-vue-style-loader/lib/addStylesClient.js */ 11).default
-var update = add("0acc9090", content, false, {"sourceMap":false,"shadowMode":false});
+var update = add("74fa34c9", content, false, {"sourceMap":false,"shadowMode":false});
 // Hot Module Replacement
 if(false) {}
 
 /***/ }),
 /* 16 */
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/HBuilderProjects/uni-efaceid/App.vue?vue&type=style&index=0&lang=css& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/view/style.js!/Users/zhangzelong/Documents/工作/eLivingDetection/App.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

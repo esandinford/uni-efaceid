@@ -3,11 +3,20 @@
     <view align="center">
       <image class='esand_logo' src="../../static/esand_logo.png"></image>
     </view>
-    
+	<view>
+		<checkbox-group class="es_checkboxContainer" @change="changeCheck">
+			<template  v-for="livingType in supportLivingTypeList">
+				<checkbox class="es_checkbox"  :value = "livingType.livingType" :checked="livingType.checked">{{livingType.title}}</checkbox>
+			</template>
+		</checkbox-group>
+	</view>
+    <view>
+		<p class="es_tip"><span>当前选择的活体类型:</span><span>{{choiceLivingType}}</span></p>
+	</view>
     <view class="btn-row">
       <button type="primary" class="primary item" @tap="startVerify()">发起活体检测</button>
     </view>
-    
+  
     <div align="center">
       <textarea :value="msg"/>
     </div>
@@ -21,11 +30,38 @@
   export default {
     data() {
       return {
-        msg: 'logs'
+		supportLivingTypeList:[
+			{livingType:1,title:"远近",checked:false},
+			{livingType:2,title:"眨眼",checked:false},
+			{livingType:3,title:"摇头",checked:false},
+			{livingType:4,title:"点头",checked:false},
+			{livingType:5,title:"张嘴",checked:false}],
+        msg: 'logs',
+		choiceLivingType:""
       }
     },
+	watch:{
+		supportLivingTypeList(){
+			console.error(this.supportLivingTypeList);
+		}
+	},
     methods: {
+		changeCheck:function(e){
+			let currentChoice = e.target.value;
+			let choice = "";
+			for(let i = 0;i<currentChoice.length;i++){
+				choice = choice + currentChoice[i];
+			}
+			this.choiceLivingType = choice;
+			console.log(this.choiceLivingType);
+			console.log(e);
+		},
       startVerify: function(e) {
+		  if(this.choiceLivingType == undefined || this.choiceLivingType.length == 0){
+			  this.msg = "活体检测类型不能为空";
+			  return;
+		  }
+		  
         /**
         * @param options(JSONObject), 包括如下字段：
         *     livingType：认证类型  1：远近，2：眨眼，3：摇头，4: 点头，5:张嘴，7:高性能远近，8：高性能摇头，9：高性能点头，可以是活体组合，如：123--先远近，后眨眼，后摇头，活体组合最多四个
@@ -43,7 +79,7 @@
         * 		"data": "......" -- 执行结果数据
         * }
         */
-        let livingDetectResult = livingDetection.verifyInit({"livingType":"134",
+        let livingDetectResult = livingDetection.verifyInit({"livingType":this.choiceLivingType,
 		"progressStaGradient":"#1781b5",
 		"progressEndGradient":"#66a9c9",
 		"progressBgColor":"#DDDDDD",
@@ -179,5 +215,23 @@
     margin-top: 20rpx;
     height: 800rpx;
     font-size: small;
+  }
+  
+  .es_checkboxContainer{
+	  width: 100vw;
+	  display:inline-block;
+	  position: relative;
+	  text-align: center;
+	  display: flex;
+	  align-items: center;
+	  flex-direction:row;
+	  justify-content: space-around;
+	  margin: 10px 0px;
+  }
+  .es_checkbox{
+	  display: inline-block;
+  }
+  .es_tip{
+	  margin: 10px 0px;
   }
 </style>
